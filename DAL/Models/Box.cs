@@ -8,7 +8,7 @@ namespace DAL.Models
 {
     public class Box
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public Guid ShipmentId { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
