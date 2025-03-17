@@ -48,7 +48,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("ShipmentId");
 
-                    b.ToTable("Boxes");
+                    b.ToTable("Boxes", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.Clients", b =>
@@ -86,7 +86,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("ShipmentId");
 
-                    b.ToTable("Clients");
+                    b.ToTable("Clients", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.Department", b =>
@@ -109,7 +109,7 @@ namespace DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.Employee", b =>
@@ -151,7 +151,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Employees");
+                    b.ToTable("Employees", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.Shipment", b =>
@@ -194,7 +194,7 @@ namespace DAL.Migrations
 
                     b.HasIndex("TrackLogTrackId");
 
-                    b.ToTable("Shipments");
+                    b.ToTable("Shipments", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.TrackLog", b =>
@@ -212,7 +212,7 @@ namespace DAL.Migrations
 
                     b.HasKey("TrackId");
 
-                    b.ToTable("TrackLogs");
+                    b.ToTable("TrackLogs", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Models.Box", b =>

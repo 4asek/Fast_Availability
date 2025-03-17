@@ -8,7 +8,7 @@ namespace DAL.Models
 {
     public class Clients
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDay { get; set; }
@@ -17,5 +17,12 @@ namespace DAL.Models
         public DateTime DateJoined { get; set; }
         public Guid ShipmentId { get; set; }
         public virtual Shipment Shimpment { get; set; }
+        public Clients() 
+        {
+            this.Id = Guid.NewGuid();
+            this.FirstName = "Your Name";
+            this.LastName = "Your LastName";
+            
+        }
     }
 }

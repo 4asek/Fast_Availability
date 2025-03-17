@@ -17,11 +17,18 @@ namespace BLL.Helper
          {
             this._dbcontext = _dbcontext;
          }
-
-        public async void CreateItem(Box box)
+        
+        public async Task CreateItem(Box box)
         {
-            await _dbcontext.AddAsync(box);
-                  _dbcontext.SaveChanges();
+            try
+            { 
+                await _dbcontext.AddAsync(box);
+                _dbcontext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed create box", ex);
+            }
         }
 
         public ICollection<Box> GetAll()
@@ -37,12 +44,6 @@ namespace BLL.Helper
                 throw new Exception("Biba ne Find");
             }
            return ZminaBox;
-        }
-
-        public void RemoveAll()
-        {
-            _dbcontext.Boxes.RemoveRange(_dbcontext.Boxes);
-            _dbcontext.SaveChanges();
         }
 
         public async void RemoveById(Guid id)

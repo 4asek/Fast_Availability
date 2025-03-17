@@ -12,10 +12,8 @@ namespace BLL.Interfaces
     {
         public ICollection<Box> GetAll();
         public Box GetById (Guid id);
-        public void CreateItem(Box box);
+        public Task CreateItem(Box box);
         public void RemoveById(Guid id);
-        public void RemoveAll();
         public void Update(Box box); 
-
     }
 }

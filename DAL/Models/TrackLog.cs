@@ -10,7 +10,7 @@ namespace DAL.Models
     public class TrackLog
     {
         [Key]
-        public Guid TrackId { get; set; }
+        public Guid TrackId { get; set; } = Guid.NewGuid();
         public string Message { get; set; }
         public double ProceedTime { get; set; }
         public ICollection<Shipment> Shipment { get; set; }

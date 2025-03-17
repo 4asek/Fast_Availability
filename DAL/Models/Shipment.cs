@@ -24,5 +24,9 @@ namespace DAL.Models
         public virtual TrackLog TrackLog { get; set; }
         public ICollection<Clients> Clients { get; set; }
         public ICollection<Box> Boxes { get; set; }
+        public Shipment() 
+        {
+        
+        }
     }
 }
